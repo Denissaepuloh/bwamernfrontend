@@ -1,4 +1,5 @@
 import React from 'react'
+import Fade from "react-reveal/Fade";
 
 import Button from "elements/Button";
 
@@ -6,8 +7,9 @@ export default function Categories({data}) {
   return data.map((category, index1) => {
     return (
       <section className="container" key={`category-${index1}`}>
-        <h4 className="mb-3 font-weight-medium">{category.name}</h4>
-        <div className="container-grid">
+        <Fade bottom>
+          <h4 className="mb-3 font-weight-medium">{category.name}</h4>
+          <div className="container-grid">
           {category.items.length === 0 ? (
             <div className="row">
               <div className="col-auto align-items-center">
@@ -53,6 +55,7 @@ export default function Categories({data}) {
             })
           )}
         </div>
+        </Fade>
       </section>
     )
   })
