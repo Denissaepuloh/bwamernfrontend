@@ -21,22 +21,22 @@ export default function BookingInformation(props) {
                     />
                     </figure>
                     <div className="row align-items-center">
-                    <div className="col">
-                        <div className="meta-wrapper">
-                        <h5>{ItemDetails.title}</h5>
-                        <span className="text-gray-500">
-                            {ItemDetails.city}, {ItemDetails.country}
-                        </span>
+                        <div className="col">
+                            <div className="meta-wrapper">
+                            <h5>{ItemDetails.name}</h5>
+                            <span className="text-gray-500">
+                                {ItemDetails.city}, {ItemDetails.country}
+                            </span>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-auto">
-                        <span>
-                        ${+checkout.duration * ItemDetails.price} USD
-                        <span className="text-gray-500"> per </span>
-                        {checkout.duration} {ItemDetails.unit}
-                        {+checkout.duration > 1 ? "s" : ""}
-                        </span>
-                    </div>
+                        <div className="col-auto">
+                            <span>
+                            ${+checkout.duration * ItemDetails.price} USD
+                            <span className="text-gray-500"> per </span>
+                            {checkout.duration} {ItemDetails.unit}
+                            {+checkout.duration > 1 ? "s" : ""}
+                            </span>
+                        </div>
                     </div>
                 </div>
                 </Fade>
